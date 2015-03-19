@@ -6,7 +6,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/pkg/term/termios"
+	"github.com/arsatiki/term/termios"
 )
 
 // Term represents an asynchronous communications port.
