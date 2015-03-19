@@ -55,7 +55,7 @@ func Cfmakecbreak(attr *syscall.Termios) {
 func Cfmakeraw(attr *syscall.Termios) {
 	attr.Iflag &^= syscall.BRKINT | syscall.ICRNL | syscall.INPCK | syscall.ISTRIP | syscall.IXON
 	attr.Oflag &^= syscall.OPOST
-	attr.Cflag &^= syscall.CSIZE | syscall.PARENB
+	attr.Cflag &^= syscall.CSIZE | syscall.PARENB | syscall.CSTOPB
 	attr.Cflag |= syscall.CS8
 	attr.Lflag &^= syscall.ECHO | syscall.ICANON | syscall.IEXTEN | syscall.ISIG
 	attr.Cc[syscall.VMIN] = 1
